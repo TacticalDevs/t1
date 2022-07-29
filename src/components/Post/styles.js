@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     zIndex: 3,
     bottom: 0,
-    top: '50%',
+    top: '40%',
     right: 0
   },
   bottomContainer: {
@@ -46,11 +46,23 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginLeft: 5
   },
+  songImageContainer: {
+    marginLeft: 50
+  },
+  songImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    borderWidth: 2,
+    borderColor: '#fff',
+    marginBottom: 20
+  },
   sideContainer: {
-    height: 300,
+    height: 400,
     flexDirection: 'column',
     justifyContent: 'space-evenly',
-    alignItems: 'center'
+    alignItems: 'center',
+    marginRight: 5
     // backgroundColor: 'yellow'
   },
   profilePicture: {
@@ -70,7 +82,8 @@ const styles = StyleSheet.create({
     color: '#fff',
     marginBottom: 20,
     fontSize: 16,
-    fontWeight: '600'
+    fontWeight: '600',
+    marginTop: 5
   }
 });
 

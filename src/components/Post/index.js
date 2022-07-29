@@ -43,29 +43,45 @@ const Post = () => {
             />
           </View>
           <View style={styles.iconsContainer}>
-            <AntDesign name={'hearto'} size={40} color="white" />
-            <Text style={styles.statsLabel}>112</Text>
+            <AntDesign name={'heart'} size={40} color="white" />
+            <Text style={styles.statsLabel}>2598</Text>
 
             <View style={styles.iconsContainer}>
               <FontAwesome name={'commenting'} size={40} color="white" />
-              <Text style={styles.statsLabel}>112</Text>
+              <Text style={styles.statsLabel}>867</Text>
             </View>
 
             <View style={styles.iconsContainer}>
-              <Fontisto name={'share-a'} size={40} color="white" />
-              <Text style={styles.statsLabel}>112</Text>
+              <FontAwesome name={'bookmark'} size={40} color="white" />
+              <Text style={styles.statsLabel}>117</Text>
+            </View>
+
+            <View style={styles.iconsContainer}>
+              <Fontisto name={'share-a'} size={35} color="white" />
+              <Text style={styles.statsLabel}>443</Text>
             </View>
           </View>
         </View>
       </View>
 
       <View style={styles.bottomContainer}>
-        <Text style={styles.handle}>@abedev</Text>
-        <Text style={styles.description}>Workout Monday!</Text>
+        <View>
+          <Text style={styles.handle}>@abedev</Text>
+          <Text style={styles.description}>Workout Monday!</Text>
 
-        <View style={styles.songRow}>
-          <Entypo name={'beamed-note'} size={24} color="white" />
-          <Text style={styles.songName}>Nirvana - Something in the way!</Text>
+          <View style={styles.songRow}>
+            <Entypo name={'beamed-note'} size={24} color="white" />
+            <Text style={styles.songName}>Nirvana - Something in the way!</Text>
+
+            <View style={styles.songImageContainer}>
+              <Image
+                style={styles.songImage}
+                source={{
+                  uri: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.sundazed.com%2Fmedia%2Fimages%2FLP-5063_BLK_900.png&f=1&nofb=1'
+                }}
+              />
+            </View>
+          </View>
         </View>
       </View>
     </View>
