@@ -1,22 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+
+import 'react-native-gesture-handler';
+import Navigator from './src/navigation';
 import Home from './src/screens/Home';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Home />
+      <Navigator />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
     // backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center'
+    // alignItems: 'center',
+    // justifyContent: 'center'
   }
 });
