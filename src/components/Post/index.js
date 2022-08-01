@@ -44,7 +44,7 @@ const Post = (props) => {
             onError={(e) => console.error(e)}
             useNativeControls="false"
             resizeMode="cover"
-            // isLooping="true"
+            isLooping="true"
             shouldPlay="true"
             onPlaybackStatusUpdate={(status) => setStatus(() => status)}
           />

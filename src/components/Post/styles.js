@@ -2,7 +2,7 @@ import { StyleSheet, Dimensions } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    height: Dimensions.get('window').height,
+    height: Dimensions.get('window').height - 55,
     width: Dimensions.get('window').width
   },
   video: {
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     marginBottom: 20
   },
   sideContainer: {
-    height: 400,
+    height: 350,
     flexDirection: 'column',
     justifyContent: 'space-evenly',
     alignItems: 'center',
