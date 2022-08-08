@@ -44,7 +44,7 @@ const Post = (props) => {
             onError={(e) => console.error(e)}
             useNativeControls="false"
             resizeMode="cover"
-            isLooping="true"
+            isLooping="false"
             shouldPlay="true"
             onPlaybackStatusUpdate={(status) => setStatus(() => status)}
           />
@@ -57,7 +57,7 @@ const Post = (props) => {
             <Image
               style={styles.profilePicture}
               source={{
-                uri: post.user.userUri
+                uri: post.user.imageUri
               }}
             />
           </View>
@@ -95,13 +95,13 @@ const Post = (props) => {
 
           <View style={styles.songRow}>
             <Entypo name={'beamed-note'} size={24} color="white" />
-            <Text style={styles.songName}>{post.song}</Text>
+            <Text style={styles.songName}>{post.song.name}</Text>
 
             <View style={styles.songImageContainer}>
               <Image
                 style={styles.songImage}
                 source={{
-                  uri: post.songImage
+                  uri: post.song.imageUri
                 }}
               />
             </View>

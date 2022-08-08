@@ -5,6 +5,10 @@ import 'react-native-gesture-handler';
 import Navigator from './src/navigation';
 import Home from './src/screens/Home';
 
+import { Amplify } from 'aws-amplify';
+import awsconfig from './src/aws-exports';
+Amplify.configure(awsconfig);
+
 export default function App() {
   return (
     <View style={styles.container}>
