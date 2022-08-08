@@ -38,7 +38,7 @@ const HomeBtnTabNavigator = () => {
         component={() => <Text>POST</Text>}
         options={{
           tabBarIcon: ({ color }) => (
-            <Entypo name="picasa" size={35} color="magenta" />
+            <Entypo name="picasa" size={35} color="orange" />
           ),
           tabBarLabel: () => null
         }}
