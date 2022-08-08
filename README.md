@@ -49,6 +49,7 @@ query listUsers {
   listUsers{
     items{
       id
+      username
     }
   }
 }
