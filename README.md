@@ -1,6 +1,6 @@
 # Project T1
 ## Description 
-React Native Cross Platform App
+This is a React Native Cross Platform social media App. 
 
 ## Mockup
 
@@ -36,7 +36,7 @@ AWS Amplify Dependencies:
   - aws-amplify aws-amplify-react-native amazon-cognito-identity-js @react-native-community/netinfo @react-native-async-storage/async-storage @react-native-picker/picker
   GraphQL
 
-## GraphQl Data sample
+## GraphQL Data sample
 
 ```query MyQuery {
   getUser(id: "494562ac-272e-47ba-907f-ad8df843f06e") {
