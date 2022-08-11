@@ -1,8 +1,10 @@
 # Project T1
-
 ## Description 
-React Native Cross Platform App
+This is a React Native Cross Platform social media App. 
 
+## Mockup
+
+![t1 iphone](https://reactnative-assets.s3.amazonaws.com/Screen+Shot+2022-08-08+at+1.13.32+AM.png)
 ## Tech Stack
   React Native 
   AWS (S3, Amplify, AppSync, DynamoDB, Cognito)
@@ -34,7 +36,7 @@ AWS Amplify Dependencies:
   - aws-amplify aws-amplify-react-native amazon-cognito-identity-js @react-native-community/netinfo @react-native-async-storage/async-storage @react-native-picker/picker
   GraphQL
 
-## GraphQl Data sample
+## GraphQL Data sample
 
 ```query MyQuery {
   getUser(id: "494562ac-272e-47ba-907f-ad8df843f06e") {
