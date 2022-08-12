@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
+import { useNavigation } from '@react-navigation/native';
 
 const CameraItem = () => {
   const [hasPermission, setHasPermission] = useState(null);
@@ -10,12 +11,12 @@ const CameraItem = () => {
   //Record Btn
   const [isRecording, setIsRecording] = useState(false);
   const camera = useRef();
+  const navigation = useNavigation();
 
   useEffect(() => {
     (async () => {
       const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status === 'granted');
-      // console.warn(status);
     })();
   }, []);
 
@@ -35,6 +36,7 @@ const CameraItem = () => {
       setIsRecording(true);
       const data = await camera.current.recordAsync();
       console.log(data);
+      navigation.navigate('CreatePost', { videouri: data.uri });
     }
   };
 
