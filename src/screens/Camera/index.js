@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Camera, CameraType } from 'expo-camera';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -9,6 +9,7 @@ const CameraItem = () => {
   const [type, setType] = useState(CameraType.back);
   //Record Btn
   const [isRecording, setIsRecording] = useState(false);
+  const camera = useRef();
 
   useEffect(() => {
     (async () => {
@@ -26,13 +27,25 @@ const CameraItem = () => {
     return <Text>No access to camera</Text>;
   }
 
-  const record = () => {
-    setIsRecording(!isRecording);
+  const record = async () => {
+    if (isRecording) {
+      camera.current.stopRecording();
+      setIsRecording(false);
+    } else {
+      setIsRecording(true);
+      const data = await camera.current.recordAsync();
+      console.log(data);
+    }
   };
 
   return (
     <View style={styles.container}>
-      <Camera type={type} style={styles.camera}>
+      <Camera
+        type={type}
+        style={styles.camera}
+        ref={camera}
+        // onCameraReady={() => setIsRecording(true)}
+      >
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.flipButton}
