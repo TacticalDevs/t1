@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Home from '../screens/Home';
+import CameraItem from '../screens/Camera';
 
 const Tab = createBottomTabNavigator();
 
@@ -35,7 +36,7 @@ const HomeBtnTabNavigator = () => {
       />
       <Tab.Screen
         name="Post"
-        component={() => <Text>POST</Text>}
+        component={CameraItem}
         options={{
           tabBarIcon: ({ color }) => (
             <Entypo name="picasa" size={35} color="orange" />
