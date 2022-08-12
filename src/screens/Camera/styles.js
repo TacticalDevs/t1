@@ -33,6 +33,11 @@ const styles = StyleSheet.create({
     // flex: 1
     // alignSelf: 'flex-end',
     // alignItems: 'flex-end'
+  },
+  recording: {
+    color: '#fff',
+    borderRadius: 3,
+    backgroundColor: '#ff4343'
   }
 });
 

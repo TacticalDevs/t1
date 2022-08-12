@@ -7,6 +7,8 @@ import styles from './styles';
 const CameraItem = () => {
   const [hasPermission, setHasPermission] = useState(null);
   const [type, setType] = useState(CameraType.back);
+  //Record Btn
+  const [isRecording, setIsRecording] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -23,6 +25,10 @@ const CameraItem = () => {
   if (hasPermission === false) {
     return <Text>No access to camera</Text>;
   }
+
+  const record = () => {
+    setIsRecording(!isRecording);
+  };
 
   return (
     <View style={styles.container}>
@@ -43,11 +49,12 @@ const CameraItem = () => {
             />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.recordButton}>
+          <TouchableOpacity style={styles.recordButton} onPress={record}>
             <MaterialCommunityIcons
-              name="record-circle-outline"
-              color="#fff"
-              size={35}
+              name="record-rec"
+              color="#ff4343"
+              style={isRecording && styles.recording}
+              size={55}
             />
           </TouchableOpacity>
         </View>
